@@ -16,7 +16,7 @@ export default function ServicesSection() {
    
     return (
         <div style={{ backgroundImage: "var(--secondary-bg-img)" }} className="bg-cover">
-            <section className="text-center space-y-8 px-4 py-16 pb-20">
+            <section id="services-section" className="text-center space-y-8 px-4 py-16 pb-20 scroll-mt-20">
                 <p className="text-3xl md:text-5xl text-white font-semibold uppercase tracking-wide">
                     Our Core Services
                 </p>

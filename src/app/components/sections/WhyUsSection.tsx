@@ -87,7 +87,7 @@ export default function WhyUsSection() {
               </ul>
             </div>
           </div>
-          <a href="#contact" className="text-red-600 text-xl font-semibold transition-colors duration-200 ">
+          <a href="/AboutUs" className="text-red-600 text-xl font-semibold transition-colors duration-200 ">
             More About Us <span>&rarr;</span>
           </a>
       </div>   

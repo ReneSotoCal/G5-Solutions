@@ -29,3 +29,6 @@ body {
   margin: 0;
   padding: 0;
 }
+hmtl {
+  scroll-behavior: smooth;
+}
