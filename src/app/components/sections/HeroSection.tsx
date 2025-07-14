@@ -14,7 +14,7 @@ export default function HeroSection() {
         <p className="text-xl mb-6 max-w-2xl mx-auto pb-8">
           Managed IT, Cloud Services & Infrastructure You Can Trust.
         </p>
-        <CTAButton onClick={openForm}>Get a Free Consultation</CTAButton>
+        <CTAButton onClick={openForm}>Get Your Free Consultation</CTAButton>
       </div>
     </>
 

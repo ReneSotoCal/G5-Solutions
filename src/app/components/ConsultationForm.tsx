@@ -22,13 +22,13 @@ export default function ConsultationForm() {
 
     return (
         <>
-            <div className="fixed inset-0 bg-black bg-blend-overlay flex items-center justify-center z-50">
-                <div className="bg-white w-full  md:h-md max-w-lg max-h-lg rounded-lg lg:w-[600px] lg:h-auto m-8 p-4 sm:p-6 shadow-lg ">
-                    <button onClick={closeForm} className="text-gray-500 mb-4"> <X className="w-6 h-6" /></button>
+            <div className="fixed inset-0 bg-black bg-blend-overlay flex items-center justify-center z-50 backdrop-blur-sm bg-opacity-50">
+                <div className="bg-white w-full  md:h-md max-w-lg max-h-lg rounded-lg lg:w-[600px] lg:h-auto m-8 p-4 sm:p-6 shadow-lg">
+                    <button onClick={closeForm} className="text-gray-500 mb-4 hover:text-red-600 active:text-red-600"> <X className="w-6 h-6" /></button>
                     {/* Form */}
                     <form  
                     action = {action}
-                    className="p-4">
+                    className="p-4 overflow-y-auto">
                     <label className="block mb-2">
                         First Name:
                         <input
@@ -37,6 +37,7 @@ export default function ConsultationForm() {
                         placeholder='John'
                         required
                         className="w-full border border-gray-300 p-2 rounded mt-1"
+                        autoComplete="given-name"
                         />
                         {state.errors?.fName && <p className="text-red-500">{state.errors.fName}</p>}
                     </label>
@@ -53,8 +54,9 @@ export default function ConsultationForm() {
                         <input
                         type="text"
                         name="lName"
-                        placeholder='Doe'
+                        placeholder="Doe"
                         className="w-full border border-gray-300 p-2 rounded mt-1"
+                        autoComplete="family-name"
                         required
                         />
                         {state.errors?.lName && <p className="text-red-500">{state.errors.lName}</p>}
@@ -64,9 +66,11 @@ export default function ConsultationForm() {
                         Email:
                         <input
                         type="email"
-                        placeholder='johndoe123@gmail.com'
+                        placeholder="johndoe123@gmail.com"
+                        autoComplete="email"
                         name="email"
                         className="w-full border border-gray-300 p-2 rounded mt-1"
+                        required
                         />
                         {state.errors?.email && <p className="text-red-500">{state.errors.email}</p>}
                     </label>
@@ -78,6 +82,7 @@ export default function ConsultationForm() {
                         placeholder='(123)456-7890'
                         name="phone"
                         className="w-full border border-gray-300 p-2 rounded mt-1"
+                        autoComplete="tel"
                         required
                         />
                         {state.errors?.phone && <p className="text-red-500">{state.errors.phone}</p>}

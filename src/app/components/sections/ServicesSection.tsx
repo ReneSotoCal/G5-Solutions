@@ -29,10 +29,10 @@ export default function ServicesSection() {
                 </p>
             </section>
             <div className="flex justify-evenly flex-col xl:flex-row w-full h-auto">
-                <Card icon={cloudIcon} title="Cloud Computing" description={cloudDesciption} link="" linkText="Explore Cloud Services "/>
-                <Card icon={networkIcon} title="Networking & Infrastructure" description={networkDesciption} link="" linkText=" Discover Network Solutions "/>
-                <Card icon={cyberIcon} title="CyberSecurity" description={cyberDesciption} link="" linkText=" Protect Your Business "/>
-                <Card icon={solutionsIcon} title="End-to-End IT Solutions" description={solutionsDesciption} link="" linkText=" See Our IT Solutions " />
+                <Card icon={cloudIcon} title="Cloud Computing" description={cloudDesciption} link="/services/CloudServices" linkText="Explore Cloud Services "/>
+                <Card icon={networkIcon} title="Networking & Infrastructure" description={networkDesciption} link="/services/NetworkingServices" linkText=" Discover Network Solutions "/>
+                <Card icon={cyberIcon} title="CyberSecurity" description={cyberDesciption} link="/services/SecurityServices" linkText=" Protect Your Business "/>
+                <Card icon={solutionsIcon} title="End-to-End IT Solutions" description={solutionsDesciption} link="/services/EndToEndServices" linkText=" See Our IT Solutions " />
             </div>
         </div>
 
