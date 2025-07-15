@@ -32,14 +32,14 @@ export default function Navbar() {
                         <Link
                             href="/">
                             <Image 
-                            src="/G5-logo.png"
+                            src="/g5-new-logo.png"
                             alt="G5 logo"
                             className="order-1"
                             height={64}
                             width={64}
                             />
                         </Link>
-                        <span className="text-white text-xl font-semibold hidden sm:inline pl-2">G5 Solutions</span>
+                        <Link href="/" className="text-white text-xl font-semibold hidden sm:inline pl-2">G5 Solutions</Link>
                     </div>
                     <Link 
                         href="/" 
@@ -73,9 +73,9 @@ export default function Navbar() {
                 </div>
                 <div className="flex justify-between p-2">
                     <button
-                        className="md:hidden"
+                        className="md:hidden p-2 rounded-md hover:bg-slate-800 active:bg-slate-800"
                         onClick={() => setNavCollapsed(!navCollapsed)}>
-                        {!navCollapsed ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                        {!navCollapsed ? <X className="w-6 h-6 hover:text-red-600 focus:text-red-600 active:text-red-600 cursor-pointer" /> : <Menu className="cursor-pointer w-6 h-6" />}
                     </button>
 
                     <CTAButton onClick={openForm} className="md:hidden">Get Your Free Consultation</CTAButton>
@@ -86,14 +86,14 @@ export default function Navbar() {
                     <div className="flex items-center">
                         <Link href="/" onClick={() => setNavCollapsed(true)}>
                             <Image 
-                            src="/G5-logo.png"
+                            src="/g5-new-logo.png"
                             alt="G5 logo"
                             className="order-1"
                             height={64}
                             width={64}
                             />
                         </Link>
-                        <span className="text-white text-xl font-semibold sm:inline pl-2">G5 Solutions</span>
+                        <Link href="/" className="text-white text-xl font-semibold sm:inline pl-2">G5 Solutions</Link>
                     </div>
                         <Link href="/" onClick={() => setNavCollapsed(true)} className="active:text-red-600 focus:text-red-600 hover:text-red-600">Home</Link>
                             <div 

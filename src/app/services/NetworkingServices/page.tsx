@@ -11,13 +11,16 @@ export default function NetworkServiceSection() {
             
             <div className="w-full px-4 md:px-8 lg:px-16 py-12 bg-white text-center text-slate-900">
                 <div className="max-w-4xl mx-auto flex flex-col items-center gap-8">
-                    <Image 
-                        src="/networking-service.jpg"
-                        height={450}
-                        width={900}
-                        alt="Picture of a man working on a switchboard"
-                        className="rounded-xl shadow-md"
-                    />
+                    
+                    <div className="w-full max-w-3xl aspect-[2/1] relative">
+                        <Image 
+                            src="/networking-service.jpg"
+                            fill
+                            alt="Picture of a man working on a switchboard"
+                            className="rounded-xl shadow-md object-cover"
+                            priority
+                        />
+                    </div>
                     <div className="space-y-8">
                         <h1 className="text-4xl font-extrabold text-slate-800">Networking & Infrastructure</h1>
 
