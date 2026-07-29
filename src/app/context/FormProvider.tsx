@@ -1,5 +1,5 @@
 'use client';
-import { useState, createContext, useContext, ReactNode } from 'react';
+import { useState, createContext, useContext, ReactNode, useCallback } from 'react';
 import Navbar from '@/app/components/Navbar';
 import ConsultationForm from '@/app/components/ConsultationForm'; 
 
@@ -14,8 +14,8 @@ const formContext = createContext<ContextType | undefined>(undefined);
 export default function FormProvider({children}: {children: ReactNode}){
 
     const [isOpen, setIsOpen] = useState(false);
-    const openForm = () => setIsOpen(true);
-    const closeForm = () => setIsOpen(false);
+    const openForm = useCallback(() => { setIsOpen(true) }, []);
+    const closeForm = useCallback(() => { setIsOpen(false) }, []);
     
     return (
         <formContext.Provider value={{isOpen, openForm, closeForm}}>

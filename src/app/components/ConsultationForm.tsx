@@ -1,7 +1,7 @@
 // components/OffcanvasForm.js
 "use client"; // add this if you're using Next.js 13 app router
 import { useFormProvider } from '@/app/context/FormProvider';
-import { handleFormSubmission } from '@/app/api/submit-form/route';
+import { handleFormSubmission } from '@/app/actions/submitForm';
 import { useActionState, useEffect } from 'react';
 import { X } from 'lucide-react';
 
@@ -15,7 +15,7 @@ export default function ConsultationForm() {
     useEffect(()=>{
         if(state.success)
             closeForm();
-    }, [state.success]);
+    }, [state.success, closeForm]);
     
 
     if(!isOpen) return null;
